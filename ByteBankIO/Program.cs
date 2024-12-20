@@ -18,7 +18,7 @@ partial class Program
 {
     static void Main(string[] args)
     {
-        CriarArquivo();
+        TestaEscrita();
         Console.ReadLine();
     }
 }

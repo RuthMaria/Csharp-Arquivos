@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ByteBankIO;
 
+// essa é a melhor forma para se ler um arquivo
 partial class Program
 {
     static void UsandoStreamReader()
