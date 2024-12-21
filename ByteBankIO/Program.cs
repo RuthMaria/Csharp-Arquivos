@@ -18,7 +18,23 @@ partial class Program
 {
     static void Main(string[] args)
     {
-        UsarStreamDeEntrada();
+        var linhas = File.ReadAllLines("contas.txt");
+        Console.WriteLine($"Arquivo contas.txt possui {linhas.Length} linhas");
+
+
+        foreach (var linha in linhas)
+        {
+            Console.WriteLine(linha);
+        }
+        
+        // usamos a classe File quando trabalhamos com arquivos pequenos, pois é mais rápido e fácil
+        var bytesArquivo = File.ReadAllBytes("contas.txt");
+        Console.WriteLine($"Arquivo contas.txt possui {bytesArquivo.Length} bytes");
+
+        File.WriteAllText("escrevendoComClasseFile.txt", "Testando File.WriteAllText");
+
+        Console.WriteLine("Aplicação Finalizada ...");
+
         Console.ReadLine();
     }
 }
